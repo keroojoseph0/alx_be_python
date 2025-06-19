@@ -22,6 +22,6 @@ class TestSimpleCalculator(unittest.TestCase):
         sefl.assertEqual(self.calc.multiply(2, -5), -10)
         self.assertEqual(self.calc.multiply('2', 5), "Error: connot multiply string in number")
 
-    def test_divide(self):
+    def test_division(self):
         self.assertEqual(self.calc.divide(2, 0), "Error: connot divide by zero.")
         self.assertEqual(self.calc.divide(2, 2), 1)
