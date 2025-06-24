@@ -30,3 +30,15 @@ class  Library:
                 print(f"{class_name}: {book.title} by {book.author}, File Size: {book.file_size}KB")
             else:
                 print(f"{class_name}: {book.title} by {book.author}, Page Count: {book.page_count}")
+    
+    def __str__(self):
+        result = "Library Contents:\n"
+        for book in self.books:
+            class_name = book.__class__.__name__
+            if class_name == "Book":
+                result += f"{class_name}: {book.title} by {book.author}\n"
+            elif class_name == "EBook":
+                result += f"{class_name}: {book.title} by {book.author}, File Size: {book.file_size}KB\n"
+            else:
+                result += f"{class_name}: {book.title} by {book.author}, Page Count: {book.page_count}\n"
+        return result.strip()
