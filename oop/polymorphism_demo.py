@@ -1,3 +1,5 @@
+import math
+
 class Shape:
     def area(self):
         raise NotImplementdError("the derived class want override this method")
